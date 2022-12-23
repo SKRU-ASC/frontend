@@ -4,11 +4,18 @@ import { ClickToComponent } from "click-to-react-component";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./pages/App";
 import "./assets/css/index.css";
+import ResponsiveAppBar from "./components/appbar";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <ResponsiveAppBar />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+    ],
   },
 ]);
 
