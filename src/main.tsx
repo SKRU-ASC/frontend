@@ -1,12 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { ClickToComponent } from "click-to-react-component";
-import App from './App'
-import './index.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./pages/App";
+import "./assets/css/index.css";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
     <ClickToComponent />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
