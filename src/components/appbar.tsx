@@ -42,7 +42,7 @@ export default function ResponsiveAppBar() {
   };
 
   return (
-    <div id="AppBar">
+    <Box sx={{ display: "flex" }}>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -62,7 +62,7 @@ export default function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              SKRU
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -167,7 +167,8 @@ export default function ResponsiveAppBar() {
           </Toolbar>
         </Container>
       </AppBar>
+
       <Outlet />
-    </div>
+    </Box>
   );
 }
