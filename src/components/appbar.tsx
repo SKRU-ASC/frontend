@@ -45,7 +45,7 @@ export default function ResponsiveAppBar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "grid" }}>
         <AppBar position="static">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
