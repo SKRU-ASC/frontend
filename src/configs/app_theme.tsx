@@ -1,13 +1,13 @@
-import createTheme from "@mui/material/styles/createTheme";
+import createTheme from '@mui/material/styles/createTheme'
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#ffc107",
-      contrastText: "#ffffff",
+      main: '#ffc107',
+      contrastText: '#ffffff',
     },
     secondary: {
-      main: "#fafafa",
+      main: '#fafafa',
     },
   },
   breakpoints: {
@@ -19,6 +19,6 @@ const theme = createTheme({
       xl: 1536, // large screens
     },
   },
-});
+})
 
-export default theme;
+export default theme
