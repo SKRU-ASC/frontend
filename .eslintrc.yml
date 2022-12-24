@@ -4,10 +4,11 @@ env:
 extends:
   - eslint:recommended
   - plugin:react/recommended
+  - plugin:react/jsx-runtime
   - plugin:@typescript-eslint/recommended
   - prettier
 overrides: []
-parser: "@typescript-eslint/parser"
+parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -15,14 +16,18 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-  - "react-hooks"
-  - "@typescript-eslint"
+  - 'react-hooks'
+  - '@typescript-eslint'
   - prettier
 rules:
   camelcase: error
   spaced-comment: error
-  quotes: ["error", "single"]
+  quotes: ['error', 'single']
   no-duplicate-imports: error
+  no-unused-vars: off
+  '@typescript-eslint/no-unused-vars': error
 settings:
-  "import/resolver":
+  'import/resolver':
     typescript: {}
+  'react':
+    version: detect
