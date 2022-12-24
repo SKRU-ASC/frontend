@@ -1,4 +1,13 @@
-import { Box } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
+import theme from "../configs/AppTheme";
 
 export default function LandingPage() {
   return (
@@ -60,6 +69,56 @@ export default function LandingPage() {
             บริการจัดฝึกอบรมแบบครบวงจรเพื่อการเรียนรู้
           </p>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          margin: "30px 15% 30px 15%",
+          [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
+        }}
+      >
+        <Card
+          sx={{
+            display: "flex",
+            padding: "2%",
+            [theme.breakpoints.down("sm")]: { flexDirection: "column" },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="alt"
+            sx={{ height: 200, objectFit: "scale-down" }}
+            image="https://sci.skru.ac.th/science/download/formdownload/logo/SciLogoPNG.png"
+          />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <CardContent>
+              <Typography variant="body2">
+                &emsp;&emsp;ศูนย์วิทยาศาสตร์ มหาวิทยาลัยราชภัฏสงขลา
+                ได้เปิดบริการการเรียนรู้วิทยาศาสตร์
+                ในรูปแบบการเรียนรู้วิทยาศาสตร์ในชีวิตประจำวัน แก่นักเรียน
+                นักศึกษา และผู้สนใจ
+                โดยจัดเนื้อหาสาระที่สอดคล้องกับสาระการเรียนรู้วิชาวิทยาศาสตร์ทั้ง
+                8 กลุ่มสาระ
+                ซึ่งในการจัดกิจกรรมการเรียนรู้เน้นความรู้บูรณการกับความสนุกสนาน
+                ให้มีการปฏิบัติจริงด้วยตนเองและการลงมือทดลองปฏิบัติทางวิทยาศาสตร์
+                โดยใช้กระบวนการและทักษะทางวิทยาศาสตร์
+                ให้มีความแตกต่างจากการเรียนรู้ในโรงเรียน
+              </Typography>
+              <Typography variant="body2">
+                &emsp;&emsp;ในปี 2562 นี้ ศูนย์วิทยาศาสตร์
+                มหาวิทยาลัยราชภัฏสงขลา
+                ได้จัดกิจกรรมวิทยาศาสตร์น่ารู้เพื่อบริการแก่นักเรียน นักศึกษา
+                และผู้สนใจ ในเนื้อหาที่ครอบคลุมทั้ง 8 สาระ ตามสาระการเรียนรู้
+                กลุ่มสาระการเรียนรู้วิทยาศาสตร์ ขอเชิญครู อาจารย์ และนักเรียน
+                ร่วมเรียนรู้วิทยาศาสตร์อย่างสนุกสนาน
+              </Typography>
+            </CardContent>
+          </Box>
+        </Card>
       </Box>
     </Box>
   );
