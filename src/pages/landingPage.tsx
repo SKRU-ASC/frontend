@@ -73,6 +73,7 @@ export default function LandingPage() {
       <Box
         sx={{
           margin: "30px 15% 30px 15%",
+          [theme.breakpoints.down("md")]: { margin: "30px" },
           [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
         }}
       >
