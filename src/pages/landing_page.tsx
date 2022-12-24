@@ -7,7 +7,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import theme from "../configs/AppTheme";
+import theme from "../configs/app_theme";
 
 export default function LandingPage() {
   return (

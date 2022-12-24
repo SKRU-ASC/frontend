@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import theme from "../configs/AppTheme";
+import theme from "../configs/app_theme";
 
 export default function Error() {
   return (

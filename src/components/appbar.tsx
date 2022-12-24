@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 
 import { Outlet, Link, useLoaderData } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../configs/AppTheme";
+import theme from "../configs/app_theme";
 
 const pages = ["HOME", "Products", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
