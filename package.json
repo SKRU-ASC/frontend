@@ -8,8 +8,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src/**/*.{ts,tsx}",
-    "format": "eslint --fix src/**/*.{ts,tsx} && prettier --write src/**/*.{ts,tsx}"
+    "lint": "eslint src/**/*.tsx src/*.tsx",
+    "format": "eslint --fix src/**/*.tsx src/*.tsx && prettier --write src/**/*.tsx src/*.tsx"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
