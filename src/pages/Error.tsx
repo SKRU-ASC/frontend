@@ -1,10 +1,10 @@
 import { Box, Button, Container, ThemeProvider, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import theme from '../configs/app_theme'
+import Theme from '../configs/Theme'
 
 export default function Error() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <Box
         sx={{
           display: 'flex',
