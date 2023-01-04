@@ -1,29 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ClickToComponent } from 'click-to-react-component'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Error from './pages/error_page'
-import './assets/css/index.css'
-import ResponsiveAppBar from './components/appbar'
-import LandingPage from './pages/landing_page'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <ResponsiveAppBar />,
-    errorElement: <Error />,
-    children: [
-      {
-        path: '/',
-        element: <LandingPage />,
-      },
-    ],
-  },
-])
+import './assets/css/index.css'
+import { Home, Cart } from './pages/Customer'
+import { Login, Booking } from './pages/Admin'
+import Error from './pages/Error'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route errorElement={<Error />}></Route>
+      <Route index element={<Home />}></Route>
+      <Route path='cart' element={<Cart />}></Route>
+
+      <Route path='admin'>
+        <Route path='login' element={<Login />}></Route>
+        <Route index element={<Booking />}></Route>
+      </Route>
+    </Route>,
+  ),
+)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <ClickToComponent />
+    <>
+      <RouterProvider router={router} />
+      {import.meta.env.DEV === true ? <ClickToComponent /> : null}
+    </>
   </React.StrictMode>,
 )
