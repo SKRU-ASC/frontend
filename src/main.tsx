@@ -10,7 +10,7 @@ import {
 
 import './assets/css/index.css'
 import { Home, Cart } from './pages/Customer'
-import { Login, Booking } from './pages/Admin'
+import { Login, Booking, Course } from './pages/Admin'
 import Error from './pages/Error'
 
 const router = createBrowserRouter(
@@ -23,6 +23,7 @@ const router = createBrowserRouter(
       <Route path='admin'>
         <Route path='login' element={<Login />}></Route>
         <Route index element={<Booking />}></Route>
+        <Route path='course' element={<Course />}></Route>
       </Route>
     </Route>,
   ),
