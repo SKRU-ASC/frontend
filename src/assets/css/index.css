@@ -26,6 +26,13 @@
   font-weight: 800;
 }
 
+html,
+body,
+#root {
+  margin: 0px;
+  height: 100%;
+}
+
 body {
   font-family: 'LINE Seed Sans TH', sans-serif;
 }

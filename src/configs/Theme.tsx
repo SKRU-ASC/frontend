@@ -1,6 +1,27 @@
 import createTheme from '@mui/material/styles/createTheme'
 
-const theme = createTheme({
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: false; // removes the `xs` breakpoint
+    sm: false;
+    md: false;
+    lg: false;
+    xl: false;
+    mobile: true; // adds the `mobile` breakpoint
+    tablet: true;
+    laptop: true;
+    desktop: true;
+  }
+}
+
+
+export const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'LINE Seed Sans TH',
+      'sans-serif',
+    ].join(','),
+  },
   palette: {
     primary: {
       main: '#ffc107',
@@ -12,13 +33,11 @@ const theme = createTheme({
   },
   breakpoints: {
     values: {
-      xs: 300, // phone
-      sm: 600, // tablets
-      md: 900, // small laptop
-      lg: 1200, // desktop
-      xl: 1536, // large screens
+      mobile: 300,
+      tablet: 640,
+      laptop: 1024,
+      desktop: 1200,
     },
   },
 })
 
-export default theme
