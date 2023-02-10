@@ -1,0 +1,55 @@
+.modalSureDelete{
+  position: absolute;
+  width: 500px;
+  height: 180px;
+  padding-top: 20px;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.2px solid #000;
+  background-color: aliceblue;
+  text-align: center;
+}
+
+.boxHeaderTable{
+  text-align: end;
+}
+
+.buttonAction{
+  border-radius: 8px;
+  margin: 0px 0px 16px 16px ;
+  height: 56px;
+  width: 100px;
+  background-color: #FFFF;
+}
+.buttonExit{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  color: red;
+  margin-bottom: 16px;
+}
+
+.fontAction{
+  font-size: 16px;
+  /* font-family: ; */
+}
+
+.boxCreateUpdate{
+  border-radius: 20px;
+  background-color: skyblue;
+  padding: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+.boxTable{
+  border-radius: 20px;
+  background-color: skyblue;
+  padding: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 25rem;
+}
